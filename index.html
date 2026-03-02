@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic E-commerce with Side Cart</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">
+  <img src="img/log.png" alt="Logo" width="50" height="50">
+  <span class="logo-text">My Shop</span>
+</div>
+    <input type="text" id="searchInput" placeholder="Search products...">
+    <div class="nav-links" >
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+         <button id="cartBtn">Cart(<span id="cartCount">0</span>)</button>
+        <button id="loginBtn" style="background-color: blue; border-radius: 10px; width: 50px; height: 31px;" >Login</button>
+        
+    
+       
+    </div>
+</nav>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p id="loginMessage"></p>
+    </div>
+</div>
+
+<!-- Side Cart -->
+<div id="cartPanel" class="cart-panel">
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+    <button id="closeCart">Close Cart</button>
+</div>
+<br>
+<br>
+
+<!-- About Section -->
+<section id="about">
+    <h1>About Us</h1>
+   
+    <p style="color: yellow;">Welcome to MyShop! We offer a variety of products with modern design and quality.</p>
+</section>
+
+<!-- Products Section -->
+<section id="products">
+    <h1>Products</h1>
+    <div class="products-container" id="productsContainer"></div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h1>Contact Us</h1>
+    <form id="contactForm">
+        <input type="text" id="contactName" placeholder="Your Name" required>
+        <input type="email" id="contactEmail" placeholder="Your Email" required>
+        <textarea id="contactMessage" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 MyShop. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
